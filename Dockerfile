@@ -15,7 +15,7 @@ RUN wget https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz \
 	&& rm android-sdk_r24.4.1-linux.tgz
 
 # Install components
-ENV ANDROID_COMPONENTS platform-tools,android-25,build-tools-25.0.3
+ENV ANDROID_COMPONENTS platform-tools,android-25,build-tools-25.0.2
 RUN while true; do echo y; sleep 2; done | /usr/local/android-sdk/tools/android update sdk --filter "${ANDROID_COMPONENTS}" --no-ui -a
 
 # Environment variables
