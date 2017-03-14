@@ -1,6 +1,6 @@
 node {
   stage('build') {
     checkout scm
-    sh "docker build --tag=thomasnordquist/docker-android-build-environment ."
+    sh "docker build --no-cache --tag=thomasnordquist/docker-android-build-environment ."
   }
 }
