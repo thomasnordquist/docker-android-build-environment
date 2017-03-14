@@ -27,5 +27,7 @@ ENV PATH $PATH:$ANDROID_SDK_HOME/build-tools/25.0.3
 ENV PATH $PATH:$ANDROID_NDK_HOME
 
 # Create user with UID=1000 (default for debian / ubuntu)
-RUN adduser build
-USER build
+RUN adduser jenkins
+USER jenkins
+
+VOLUME /home/jenkins
